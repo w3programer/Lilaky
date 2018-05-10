@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Created by hesham tatawy on 13/08/1439 AH.
+*/
+"Username" = " اسم المستخدم";
+"Password" = " كلمه المرور";
+"LoginButton" = "تسجيل دخول";
+"Esc"= "تخطي";
+"Regstration"= "تسجيل جديد";
+"loginmessagehead" = "تنبيه";
+"loginmessagebody"= " خطا في كلمه المرور او اسم المستخدم";
+"connectionbody" = "خطا في الاتصال بالانترنت";
+
+"registrationsuccess" = "تم التسجيل بنجاح";
+"registrationbuton" = "تسجيل جديد";
