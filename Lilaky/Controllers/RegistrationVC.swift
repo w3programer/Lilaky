@@ -8,35 +8,13 @@
 
 import UIKit
 class RegistrationVC: UIViewController {
-
-    
     @IBOutlet weak var EmailTxt: UITextField!
-    
     @IBOutlet weak var PhoneTxt: UITextField!
-    
     @IBOutlet weak var UserNameTxt: UITextField!
-    
     @IBOutlet weak var PasswordTxt: UITextField!
-
-    @IBOutlet weak var ButtonTxt: UIButton!
-    
-    @IBOutlet weak var EscTxt: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        translationcomponent()
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func RegButton(_ sender: UIButton) {
         guard let email = EmailTxt.text?.trimmed, !email.isEmpty
             ,let phone = PhoneTxt.text?.trimmed, !phone.isEmpty
@@ -48,7 +26,7 @@ class RegistrationVC: UIViewController {
         let token = ""
         Api.registration(username: username, password: password, token:token, email: email, phone: phone) { (error :Error?, success: Bool) in
             if success{
-              
+            
                 let title:String = NSLocalizedString("loginmessagehead", comment: "")
                 let message:String = NSLocalizedString("registrationsuccess", comment: "")
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -56,7 +34,7 @@ class RegistrationVC: UIViewController {
                 self.present(alert,animated: true)
                 
 
-                
+                  self.performSegue(withIdentifier: "HomeSegue", sender: self)
                 
             }
             
@@ -65,28 +43,7 @@ class RegistrationVC: UIViewController {
         
         
     }
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func EscBut(_ sender: UIButton) {
         performSegue(withIdentifier: "MainSegue", sender: self)
         dismiss(animated: true, completion: nil)
@@ -99,15 +56,7 @@ class RegistrationVC: UIViewController {
         self.view.endEditing(true)
     }
 
-    func translationcomponent() {
-        ButtonTxt.setTitle(NSLocalizedString("registrationbuton", comment: ""), for: .normal)
-                EscTxt.setTitle(NSLocalizedString("Esc", comment: ""), for: .normal)
-        
-        
-        
-        
-    }
-    
+   
 
 
 }
