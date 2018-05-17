@@ -52,8 +52,6 @@ class NaveMenu: UIViewController {
     @IBAction func LogOut(_ sender: UIButton) {
    
        Helper.logout()
-        dismiss(animated: true, completion: nil)
-
         self.performSegue(withIdentifier: "LogOutSegue", sender: self)
     
     }

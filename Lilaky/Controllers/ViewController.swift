@@ -49,13 +49,13 @@ class ViewController: UIViewController  {
 
     @IBAction func EscAction(_ sender: Any) {
         performSegue(withIdentifier: "HomeSegue", sender: self)
-        dismiss(animated: true, completion: nil)
+       // dismiss(animated: true, completion: nil)
 
     }
     
     @IBAction func RegisterAction(_ sender: Any) {
         performSegue(withIdentifier: "RegistrationSegue", sender: self)
-        dismiss(animated: true, completion: nil)
+       // dismiss(animated: true, completion: nil)
     }
    
 }
