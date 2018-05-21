@@ -31,6 +31,13 @@ class Helper: NSObject {
         return (def.object(forKey: "user_email") as? String) != nil
         
     }
+    class func getuserid()->Int{
+        let def = UserDefaults.standard
+        return (def.object(forKey: "user_id") as! Int)
+    }
+    
+    
+    
     class func logout(){
         let def = UserDefaults.standard
         def.removeObject(forKey: "user_email")

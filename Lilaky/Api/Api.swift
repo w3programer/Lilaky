@@ -72,6 +72,7 @@ class Api: NSObject {
         }
         
     }
+  //////////////all offers
     
     
 }
