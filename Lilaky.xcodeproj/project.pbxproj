@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5409532D2095C88D0093F671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5409532C2095C88D0093F671 /* AppDelegate.swift */; };
-		5409532F2095C88D0093F671 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5409532E2095C88D0093F671 /* ViewController.swift */; };
+		5409532F2095C88D0093F671 /* LogInVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5409532E2095C88D0093F671 /* LogInVc.swift */; };
 		540953322095C88E0093F671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540953302095C88E0093F671 /* Main.storyboard */; };
 		540953342095C9FC0093F671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 540953332095C9FC0093F671 /* Assets.xcassets */; };
 		540953372095C9FC0093F671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540953352095C9FC0093F671 /* LaunchScreen.storyboard */; };
@@ -28,6 +28,11 @@
 		54AA6A8120B1CAAB00ADCC7E /* UploadCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54AA6A7F20B1CAAB00ADCC7E /* UploadCVCell.xib */; };
 		54B0AAD720B19D98000BB690 /* Api+reserveoffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0AAD620B19D98000BB690 /* Api+reserveoffer.swift */; };
 		54B0AAD920B1A3DA000BB690 /* UploadPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0AAD820B1A3DA000BB690 /* UploadPhotoVC.swift */; };
+		54B498FD20B4428900AF3579 /* MyAlbumVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B498FC20B4428900AF3579 /* MyAlbumVCell.swift */; };
+		54B4990220B4447600AF3579 /* MyAlbumVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4990120B4447600AF3579 /* MyAlbumVc.swift */; };
+		54B4990620B4480E00AF3579 /* MyAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4990520B4480E00AF3579 /* MyAlbum.swift */; };
+		54B4990820B44AA500AF3579 /* Api+Myalbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4990720B44AA500AF3579 /* Api+Myalbums.swift */; };
+		54B4990A20B44DEA00AF3579 /* MyGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4990920B44DEA00AF3579 /* MyGallery.swift */; };
 		54C9144A20B0295900A6E21B /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9144920B0295900A6E21B /* Offers.swift */; };
 		54C9144C20B0314400A6E21B /* Api+Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9144B20B0314400A6E21B /* Api+Offers.swift */; };
 		54C9144E20B055C500A6E21B /* OffersDetailes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9144D20B055C500A6E21B /* OffersDetailes.swift */; };
@@ -42,7 +47,7 @@
 		35ECB3BEA24FA4708A91E578 /* Pods-Lilaky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lilaky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lilaky/Pods-Lilaky.debug.xcconfig"; sourceTree = "<group>"; };
 		540953292095C88D0093F671 /* Lilaky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lilaky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5409532C2095C88D0093F671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5409532E2095C88D0093F671 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5409532E2095C88D0093F671 /* LogInVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVc.swift; sourceTree = "<group>"; };
 		540953312095C88E0093F671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		540953332095C9FC0093F671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		540953362095C9FC0093F671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +70,11 @@
 		54AEEF6220AB0A3900ECB6D9 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		54B0AAD620B19D98000BB690 /* Api+reserveoffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+reserveoffer.swift"; sourceTree = "<group>"; };
 		54B0AAD820B1A3DA000BB690 /* UploadPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoVC.swift; sourceTree = "<group>"; };
+		54B498FC20B4428900AF3579 /* MyAlbumVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumVCell.swift; sourceTree = "<group>"; };
+		54B4990120B4447600AF3579 /* MyAlbumVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumVc.swift; sourceTree = "<group>"; };
+		54B4990520B4480E00AF3579 /* MyAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbum.swift; sourceTree = "<group>"; };
+		54B4990720B44AA500AF3579 /* Api+Myalbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Myalbums.swift"; sourceTree = "<group>"; };
+		54B4990920B44DEA00AF3579 /* MyGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGallery.swift; sourceTree = "<group>"; };
 		54C9144920B0295900A6E21B /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
 		54C9144B20B0314400A6E21B /* Api+Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Offers.swift"; sourceTree = "<group>"; };
 		54C9144D20B055C500A6E21B /* OffersDetailes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersDetailes.swift; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				54C9144920B0295900A6E21B /* Offers.swift */,
+				54B4990520B4480E00AF3579 /* MyAlbum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,18 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				5409532C2095C88D0093F671 /* AppDelegate.swift */,
-				5409532E2095C88D0093F671 /* ViewController.swift */,
-				541797A220973D0C00A4ADA3 /* RegistrationVC.swift */,
-				541797A4209756B500A4ADA3 /* HomeVc.swift */,
 				54F48E8D209B31D60046F1EB /* NaveMenu.swift */,
-				546767DE20A08978009FDC2C /* AboutUsVc.swift */,
-				546767E020A08991009FDC2C /* ContactUsVC.swift */,
-				546767E220A089A6009FDC2C /* ProfileVc.swift */,
-				54E4C08820A86A1100A8FD45 /* AlbumsVc.swift */,
-				54E4C08A20A870EE00A8FD45 /* PhotoCell.swift */,
-				54C9144D20B055C500A6E21B /* OffersDetailes.swift */,
-				54B0AAD820B1A3DA000BB690 /* UploadPhotoVC.swift */,
-				54AA6A7E20B1CAAB00ADCC7E /* UploadCVCell.swift */,
+				541797A4209756B500A4ADA3 /* HomeVc.swift */,
+				54B4990020B4440400AF3579 /* AllAlbum */,
+				54B498FE20B443B500AF3579 /* MyAlbum */,
+				54B498FF20B443E200AF3579 /* UploadVC */,
+				54B4990420B4455C00AF3579 /* OtherVC */,
+				54B4990320B444F100AF3579 /* Users */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,8 +192,57 @@
 				54C9144B20B0314400A6E21B /* Api+Offers.swift */,
 				54B0AAD620B19D98000BB690 /* Api+reserveoffer.swift */,
 				547116EF20B322CC00BC4D54 /* Api+Upload.swift */,
+				54B4990720B44AA500AF3579 /* Api+Myalbums.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		54B498FE20B443B500AF3579 /* MyAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				54B498FC20B4428900AF3579 /* MyAlbumVCell.swift */,
+				54B4990120B4447600AF3579 /* MyAlbumVc.swift */,
+				54B4990920B44DEA00AF3579 /* MyGallery.swift */,
+			);
+			path = MyAlbum;
+			sourceTree = "<group>";
+		};
+		54B498FF20B443E200AF3579 /* UploadVC */ = {
+			isa = PBXGroup;
+			children = (
+				54B0AAD820B1A3DA000BB690 /* UploadPhotoVC.swift */,
+				54AA6A7E20B1CAAB00ADCC7E /* UploadCVCell.swift */,
+			);
+			path = UploadVC;
+			sourceTree = "<group>";
+		};
+		54B4990020B4440400AF3579 /* AllAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				54E4C08820A86A1100A8FD45 /* AlbumsVc.swift */,
+				54E4C08A20A870EE00A8FD45 /* PhotoCell.swift */,
+				54C9144D20B055C500A6E21B /* OffersDetailes.swift */,
+			);
+			path = AllAlbum;
+			sourceTree = "<group>";
+		};
+		54B4990320B444F100AF3579 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				541797A220973D0C00A4ADA3 /* RegistrationVC.swift */,
+				546767E220A089A6009FDC2C /* ProfileVc.swift */,
+				5409532E2095C88D0093F671 /* LogInVc.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		54B4990420B4455C00AF3579 /* OtherVC */ = {
+			isa = PBXGroup;
+			children = (
+				546767DE20A08978009FDC2C /* AboutUsVc.swift */,
+				546767E020A08991009FDC2C /* ContactUsVC.swift */,
+			);
+			path = OtherVC;
 			sourceTree = "<group>";
 		};
 		E8CEA37EA5B3FEE5CC9C4D88 /* Frameworks */ = {
@@ -336,12 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B4990220B4447600AF3579 /* MyAlbumVc.swift in Sources */,
 				54E4C08C20A870EE00A8FD45 /* PhotoCell.swift in Sources */,
+				54B4990A20B44DEA00AF3579 /* MyGallery.swift in Sources */,
+				54B4990820B44AA500AF3579 /* Api+Myalbums.swift in Sources */,
 				54E4C08920A86A1100A8FD45 /* AlbumsVc.swift in Sources */,
 				546767DF20A08978009FDC2C /* AboutUsVc.swift in Sources */,
 				54B0AAD920B1A3DA000BB690 /* UploadPhotoVC.swift in Sources */,
 				541797A5209756B500A4ADA3 /* HomeVc.swift in Sources */,
-				5409532F2095C88D0093F671 /* ViewController.swift in Sources */,
+				5409532F2095C88D0093F671 /* LogInVc.swift in Sources */,
 				54C9144C20B0314400A6E21B /* Api+Offers.swift in Sources */,
 				54B0AAD720B19D98000BB690 /* Api+reserveoffer.swift in Sources */,
 				54733DAB2098AFD1004C6DE3 /* String+extension.swift in Sources */,
@@ -354,9 +412,11 @@
 				54AA6A8020B1CAAB00ADCC7E /* UploadCVCell.swift in Sources */,
 				54C9144A20B0295900A6E21B /* Offers.swift in Sources */,
 				547116F020B322CC00BC4D54 /* Api+Upload.swift in Sources */,
+				54B498FD20B4428900AF3579 /* MyAlbumVCell.swift in Sources */,
 				541797A320973D0C00A4ADA3 /* RegistrationVC.swift in Sources */,
 				54733DC020992865004C6DE3 /* Helper.swift in Sources */,
 				54C9144E20B055C500A6E21B /* OffersDetailes.swift in Sources */,
+				54B4990620B4480E00AF3579 /* MyAlbum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

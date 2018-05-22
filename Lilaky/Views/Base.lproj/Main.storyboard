@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In Vc-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lilaky" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInVc" customModule="Lilaky" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,12 +348,93 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="heK-H2-sZB" kind="show" identifier="NewAlbum" id="vtD-Zo-gLo"/>
+                        <segue destination="WR6-QG-PnH" kind="show" identifier="MyalbumSegue" id="H82-Vc-If1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEM-wL-Csb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="qKi-0Y-0bd"/>
             </objects>
             <point key="canvasLocation" x="3493.5" y="-432"/>
+        </scene>
+        <!--My Album Vc-->
+        <scene sceneID="9Qi-rf-dKL">
+            <objects>
+                <viewController id="WR6-QG-PnH" customClass="MyAlbumVc" customModule="Lilaky" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cas-TH-MGx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pxw-Gl-jrW">
+                                <rect key="frame" x="5" y="5" width="404" height="682"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b9k-UE-eE6">
+                                    <size key="itemSize" width="187" height="222"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyAlbumCell" id="IXZ-7r-nzD" customClass="MyAlbumVCell" customModule="Lilaky" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="187" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="KaQ-5X-5fw">
+                                                    <rect key="frame" x="5" y="5" width="177" height="163"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عرض" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8l-Fg-nsC">
+                                                    <rect key="frame" x="5" y="176" width="177" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="2vY-RW-m5n"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="KaQ-5X-5fw" firstAttribute="leading" secondItem="IXZ-7r-nzD" secondAttribute="leading" constant="5" id="3Dd-Lm-0TS"/>
+                                            <constraint firstItem="H8l-Fg-nsC" firstAttribute="leading" secondItem="IXZ-7r-nzD" secondAttribute="leading" constant="5" id="IHE-iD-dLl"/>
+                                            <constraint firstItem="KaQ-5X-5fw" firstAttribute="leading" secondItem="IXZ-7r-nzD" secondAttribute="leading" constant="5" id="KmV-IF-Y4K"/>
+                                            <constraint firstAttribute="bottom" secondItem="H8l-Fg-nsC" secondAttribute="bottom" constant="5" id="PaG-76-KnQ"/>
+                                            <constraint firstItem="KaQ-5X-5fw" firstAttribute="top" secondItem="IXZ-7r-nzD" secondAttribute="top" constant="5" id="S71-d6-kua"/>
+                                            <constraint firstItem="KaQ-5X-5fw" firstAttribute="top" secondItem="IXZ-7r-nzD" secondAttribute="top" constant="5" id="TuA-Zv-dZj"/>
+                                            <constraint firstAttribute="trailing" secondItem="KaQ-5X-5fw" secondAttribute="trailing" constant="5" id="VxW-eQ-Ev3"/>
+                                            <constraint firstAttribute="trailing" secondItem="KaQ-5X-5fw" secondAttribute="trailing" constant="5" id="kGR-iz-SzO"/>
+                                            <constraint firstAttribute="trailing" secondItem="H8l-Fg-nsC" secondAttribute="trailing" constant="5" id="uOf-oc-IzW"/>
+                                            <constraint firstItem="H8l-Fg-nsC" firstAttribute="top" secondItem="KaQ-5X-5fw" secondAttribute="bottom" constant="8" id="xay-6F-uWh"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="AlbumTitle" destination="H8l-Fg-nsC" id="Hvn-8c-kdP"/>
+                                            <outlet property="MyAlbumCover" destination="KaQ-5X-5fw" id="0mc-7s-Yus"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="WR6-QG-PnH" id="dsV-98-kmq"/>
+                                    <outlet property="delegate" destination="WR6-QG-PnH" id="HSN-vE-cfi"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Ea-XU-iZp" firstAttribute="trailing" secondItem="Pxw-Gl-jrW" secondAttribute="trailing" constant="5" id="QV8-KS-bQH"/>
+                            <constraint firstItem="0Ea-XU-iZp" firstAttribute="bottom" secondItem="Pxw-Gl-jrW" secondAttribute="bottom" constant="5" id="SZ0-K6-Nzo"/>
+                            <constraint firstItem="Pxw-Gl-jrW" firstAttribute="leading" secondItem="0Ea-XU-iZp" secondAttribute="leading" constant="5" id="fIa-uj-Ftp"/>
+                            <constraint firstItem="Pxw-Gl-jrW" firstAttribute="top" secondItem="Cas-TH-MGx" secondAttribute="top" constant="5" id="qEf-OX-KZt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Ea-XU-iZp"/>
+                    </view>
+                    <connections>
+                        <outlet property="MyAlbumCollection" destination="Pxw-Gl-jrW" id="mL5-P5-BJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VY2-bT-2o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4065" y="-947"/>
         </scene>
         <!--Albums Vc-->
         <scene sceneID="nz9-GT-8Et">

@@ -44,7 +44,7 @@ class HomeVc: SlideMenuController {
     }
     
     @IBAction func Myalbum(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "Myalbum", sender: self)
+        self.performSegue(withIdentifier: "MyalbumSegue", sender: self)
         dismiss(animated: true, completion: nil)
 
 

@@ -1,5 +1,5 @@
 import UIKit
-class ViewController: UIViewController  {
+class LogInVc: UIViewController  {
     @IBOutlet weak var UserName: UITextField!
     @IBOutlet weak var Password: UITextField!
 
