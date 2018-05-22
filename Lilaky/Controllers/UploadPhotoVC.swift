@@ -41,6 +41,7 @@ class UploadPhotoVC: UIViewController {
     @IBAction func SelectPhotoes(_ sender: UIBarButtonItem) {
         let vc = BSImagePickerViewController()
         vc.maxNumberOfSelections = imagecount-PhotoArray.count
+        vc.takePhotos = true
         //display picture gallery
         self.bs_presentImagePickerController(vc, animated: true,
                                              select: { (asset: PHAsset) -> Void in
@@ -82,7 +83,7 @@ class UploadPhotoVC: UIViewController {
                 let newImage = UIImage(data: data!)
                 self.PhotoArray.append(newImage! as UIImage)
                 
-                self.strimagearr.append((newImage?.encodeimage(format: ImageFormat.JPEG(0)))!)
+                self.strimagearr.append((newImage?.encodeimage(format: ImageFormat.JPEG(100)))!)
             }
             //self.imgView.animationImages = self.PhotoArray
            // self.imgView.animationDuration = 3.0

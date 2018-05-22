@@ -6,8 +6,6 @@
 	<string>allow for  using camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>allow for  using gallery</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>allow for  using microphone</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
