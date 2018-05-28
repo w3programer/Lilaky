@@ -22,7 +22,18 @@ class OffersDetailes: UIViewController {
         offerCover.downloadedFrom(url: url!)
     }
     @IBAction func AddPhoto(_ sender: UIButton) {
-       self.performSegue(withIdentifier: "UploadPhotoSegue", sender: self)
+        if Helper.getUserData() == true {
+            self.performSegue(withIdentifier: "UploadPhotoSegue", sender: self)
+
+        }else{
+            let title:String = NSLocalizedString("report", comment: "")
+            let message:String = NSLocalizedString("you should register firist", comment: "")
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .destructive, handler: nil))
+            self.present(alert,animated: true)
+
+        }
+        
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

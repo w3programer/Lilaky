@@ -37,14 +37,13 @@ class Api: NSObject {
     }
 ///////  registration
     
-    class func registration(username:String ,password:String ,token:String,email:String,phone:String,completion:@escaping(_ error :Error? ,_ success :Bool)->Void){
+    class func registration(username:String ,password:String ,email:String,phone:String,completion:@escaping(_ error :Error? ,_ success :Bool)->Void){
         let BaseUrl = Urls.register
         let parameters = [
             "user_name":username,
             "user_pass": password,
             "user_email":email,
             "user_phone": phone,
-             "token_id": token
         ]
         Alamofire.request(BaseUrl, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .validate(statusCode:200..<300)
@@ -52,11 +51,12 @@ class Api: NSObject {
                 switch response.result
                 {
                 case .failure( let error):
+                    print(error)
                     completion(error , false)
                 case .success(let value):
                     let data = JSON(value)
-                    
-                    if  (data["success"].string == "1") {
+                    //print(data)
+                    if  (data["success"].int == 1) {
                         
                         ///////
                         let user_id = Int(data["user_id"].string!)!

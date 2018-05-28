@@ -1,6 +1,4 @@
-
 import UIKit
-
 class MyAlbumVc: UIViewController {
     @IBOutlet var MyAlbumCollection: UICollectionView!
     var MyAlbum = [MyAlbums]()
@@ -38,9 +36,9 @@ extension MyAlbumVc: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return MyAlbum.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = MyAlbumCollection.dequeueReusableCell(withReuseIdentifier: "", for: indexPath)as? MyAlbumVCell else{return UICollectionViewCell()}
+        guard let cell = MyAlbumCollection.dequeueReusableCell(withReuseIdentifier: "MyAlbumCell", for: indexPath)as? MyAlbumVCell else{return UICollectionViewCell()}
         cell.AlbumTitle.text = MyAlbum[indexPath.row].title
         let urlString = Urls.uploads+MyAlbum[indexPath.row].img
         let url = URL(string: urlString )
@@ -49,7 +47,7 @@ extension MyAlbumVc: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "MyAlbumSegue", sender: self)
+        self.performSegue(withIdentifier: "GallerySegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,9 +72,5 @@ extension MyAlbumVc: UICollectionViewDelegateFlowLayout{
         
         return CGSize.init(width: width ,height:width)
     }
-    
-    
-    
-    
-    
+ 
 }

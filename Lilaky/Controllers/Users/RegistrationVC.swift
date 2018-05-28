@@ -1,10 +1,3 @@
-//
-//  RegistrationVC.swift
-//  Lilaky
-//
-//  Created by hesham tatawy on 14/08/1439 AH.
-//  Copyright © 1439 alatheertech. All rights reserved.
-//
 
 import UIKit
 class RegistrationVC: UIViewController {
@@ -23,33 +16,42 @@ class RegistrationVC: UIViewController {
             else {
             return
         }
-        let token = ""
-        Api.registration(username: username, password: password, token:token, email: email, phone: phone) { (error :Error?, success: Bool) in
-            if success{
+        Api.registration(username: username, password: password, email: email, phone: phone, completion: { (error:Error?, success :Bool) in
             
+            
+            if (error != nil) {
+              
+                
                 let title:String = NSLocalizedString("loginmessagehead", comment: "")
-                let message:String = NSLocalizedString("registrationsuccess", comment: "")
+                let message:String = NSLocalizedString("connectionbody", comment: "")
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "ok", style: .destructive, handler: nil))
+                self.present(alert,animated: true)
+            }else{
+           
+                
+                let title:String = NSLocalizedString("message title", comment: "")
+                let message:String = NSLocalizedString("message body", comment: "")
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
                 self.present(alert,animated: true)
-                
 
-                  self.performSegue(withIdentifier: "HomeSegue", sender: self)
                 
             }
-            
-            
-        }
+        })
         
         
-    }
+        self.performSegue(withIdentifier: "authsegue", sender: self)
 
-    @IBAction func EscBut(_ sender: UIButton) {
-        performSegue(withIdentifier: "MainSegue", sender: self)
-        dismiss(animated: true, completion: nil)
+        
+        
+        
+        
+        
+        
+
 
     }
-    
   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

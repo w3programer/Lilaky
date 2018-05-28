@@ -10,7 +10,11 @@ class NaveMenu: UIViewController {
         LogoImage.clipsToBounds = true
         super.viewDidLoad()
         hideNavigationBar()
-        
+        let def = UserDefaults.standard
+        //                        Helper.setUserData(user_id: user_id, user_email: user_email!, user_name: user_name!, user_phone: user_phone!)
+
+        UserName.text =  (def.object(forKey: "user_name") as! String)
+
     }
     @IBAction func Profile(_ sender: UIButton) {
         
@@ -23,7 +27,6 @@ class NaveMenu: UIViewController {
     @IBAction func AboutUs(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
-        
         self.performSegue(withIdentifier: "AboutUsSegue", sender: self)
 
     }

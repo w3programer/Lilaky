@@ -35,8 +35,7 @@ class Helper: NSObject {
         let def = UserDefaults.standard
         return (def.object(forKey: "user_id") as! Int)
     }
-    
-    
+
     
     class func logout(){
         let def = UserDefaults.standard

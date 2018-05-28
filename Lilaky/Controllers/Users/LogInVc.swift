@@ -6,25 +6,12 @@ class LogInVc: UIViewController  {
     ////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         if Helper.getUserData() == true {
             self.performSegue(withIdentifier: "HomeSegue", sender: self)
             
-        }    }
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        super.touchesBegan(touches, with: event)
-//        self.view.endEditing(true)
-//    }
-    
-    
-    
-    
-    
-    
+        }
+    }
+ 
     ///////  my action
     @IBAction func GoBut(_ sender: Any) {
         guard let name = UserName.text,!name.isEmpty else {return}
@@ -48,7 +35,7 @@ class LogInVc: UIViewController  {
     }
 
     @IBAction func EscAction(_ sender: Any) {
-        performSegue(withIdentifier: "HomeSegue", sender: self)
+        performSegue(withIdentifier: "ShowAlbums", sender: self)
        // dismiss(animated: true, completion: nil)
 
     }

@@ -1,9 +1,11 @@
+
 import Foundation
 import Alamofire
 import SwiftyJSON
 extension Api{
-    class func Myalbums(completion:@escaping (_ error:Error?, _ Albums:[MyAlbums]?)->Void){
-        Alamofire.request(Urls.MyAlbums).responseJSON{response in
+    class func MyPhotos(_ albumId:String?, completion:@escaping (_ error:Error?, _ Photoes:[MyPhotoes]?)->Void){
+        let url = Urls.Myphotoes+albumId!
+        Alamofire.request(url).responseJSON{response in
             switch response.result
             {
             case.failure(let error):
@@ -11,19 +13,19 @@ extension Api{
                 print(error)
             case.success(let value):
                 let json = JSON(value)
-               // print(json)
+                // print(json)
                 guard let dataArr = json.array else{
                     completion(nil , nil)
                     return
                 }
-                var Albums = [MyAlbums]()
+                var Photoes = [MyPhotoes]()
                 for data in dataArr {
-                    if let data = data.dictionary ,let myalbums = MyAlbums.init(dic: data) {
-                        Albums.append(myalbums)
+                    if let data = data.dictionary ,let myphotoes = MyPhotoes.init(dic: data) {
+                        Photoes.append(myphotoes)
                     }
                     
                 }
-                completion(nil,Albums)
+                completion(nil,Photoes)
             }
             
         }

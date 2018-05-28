@@ -7,6 +7,7 @@ class MyAlbums: NSObject {
     var detailes :String = ""
     var price :String = ""
     var size_offer :String = ""
+    var album_id :String = ""
     init?(dic:[String:JSON]) {
         guard let id = dic["offer_id"]?.string , let title = dic["title"]?.string  else {
             return nil
@@ -17,7 +18,7 @@ class MyAlbums: NSObject {
         self.img =  dic["img"]?.string ?? ""
         self.price = dic["price"]?.string ?? ""
         self.size_offer = dic["size_offer"]?.string ?? ""
-        
+        self.album_id = dic["album_id"]?.string ?? ""
     }
     
 }
