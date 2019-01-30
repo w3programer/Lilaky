@@ -23,7 +23,7 @@ class OffersDetailes: UIViewController {
     }
     @IBAction func AddPhoto(_ sender: UIButton) {
         if Helper.getUserData() == true {
-            self.performSegue(withIdentifier: "UploadPhotoSegue", sender: self)
+            self.performSegue(withIdentifier: "createPhoto", sender: self)
 
         }else{
             let title:String = NSLocalizedString("report", comment: "")

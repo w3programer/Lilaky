@@ -44,7 +44,7 @@ class NaveMenu: UIViewController {
 
             let text = "This is the text...."
             let image = UIImage(named: "mainlogo")
-            let myWebsite = NSURL(string:"https://stackoverflow.com/users/4600136/mr-javed-multani?tab=profile")
+            let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/ليلكي/id1390772349?ls=1&mt=8")
             let shareAll = [text , image! , myWebsite ?? "logo"] as [Any]
             let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view

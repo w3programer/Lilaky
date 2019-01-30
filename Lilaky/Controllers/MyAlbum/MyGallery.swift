@@ -44,9 +44,10 @@ extension MyGallery: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = GalleryCollectionView.dequeueReusableCell(withReuseIdentifier: "GalleryPhotoCell", for: indexPath)as? GalleryCell else{return UICollectionViewCell()}
-        let urlString = Urls.uploads+Photoesarr[indexPath.row].image
-        let url = URL(string: urlString )
-        cell.GalleryPhoto.downloadedFrom(url: url!)
+       // let urlString = Urls.uploads+Photoesarr[indexPath.row].image
+        //let url = URL(string: urlString )
+       // cell.GalleryPhoto.downloadedFrom(url: url!)
+        cell.photo = Photoesarr[indexPath.item]
         return cell
     }
     

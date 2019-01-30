@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LeC-Yj-emw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LeC-Yj-emw">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4000" y="-1331"/>
+            <point key="canvasLocation" x="4459" y="-1331"/>
         </scene>
         <!--RegistrationVC-->
         <scene sceneID="w5D-O2-1L1">
@@ -146,7 +146,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="center" minimumFontSize="17" background="phone" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-16-Epf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone(optional)" textAlignment="center" minimumFontSize="17" background="phone" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-16-Epf">
                                 <rect key="frame" x="41" y="380" width="331" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="ufK-W4-Yov"/>
@@ -207,6 +207,7 @@
                             <constraint firstItem="4lC-16-Epf" firstAttribute="leading" secondItem="yOL-52-c7h" secondAttribute="leading" constant="41" id="Oor-3X-ujA"/>
                             <constraint firstItem="yOL-52-c7h" firstAttribute="trailing" secondItem="U6o-tl-uN4" secondAttribute="trailing" constant="42" id="OxE-9n-KVf"/>
                             <constraint firstItem="Mpb-hn-XGo" firstAttribute="top" secondItem="4lC-16-Epf" secondAttribute="bottom" constant="8" id="Pyc-26-5RX"/>
+                            <constraint firstItem="yOL-52-c7h" firstAttribute="trailing" secondItem="VQX-0x-UR8" secondAttribute="trailing" constant="149" id="bTT-HZ-S7g"/>
                             <constraint firstItem="4lC-16-Epf" firstAttribute="top" secondItem="0LD-3i-Ami" secondAttribute="bottom" constant="8" id="cJU-im-PG0"/>
                             <constraint firstItem="yOL-52-c7h" firstAttribute="trailing" secondItem="0LD-3i-Ami" secondAttribute="trailing" constant="42" id="g3Y-3V-bAt"/>
                             <constraint firstItem="U6o-tl-uN4" firstAttribute="top" secondItem="6ce-64-o8T" secondAttribute="bottom" constant="8" id="gR9-Hy-d4Q"/>
@@ -224,14 +225,12 @@
                     <connections>
                         <outlet property="EmailTxt" destination="0LD-3i-Ami" id="dRY-vP-Ciq"/>
                         <outlet property="PasswordTxt" destination="U6o-tl-uN4" id="H56-gd-KZp"/>
-                        <outlet property="PhoneTxt" destination="4lC-16-Epf" id="2pv-qz-pZX"/>
                         <outlet property="UserNameTxt" destination="6ce-64-o8T" id="iHJ-0E-dy3"/>
-                        <segue destination="LeC-Yj-emw" kind="show" identifier="authsegue" id="G1i-CM-LfT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pED-3T-opc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4910" y="-1356"/>
+            <point key="canvasLocation" x="5707" y="-1411"/>
         </scene>
         <!--Home Vc-->
         <scene sceneID="URy-Oq-W0F">
@@ -652,11 +651,45 @@
                         <outlet property="OfferTitle" destination="yT9-un-Ncc" id="G8c-Tg-qu1"/>
                         <outlet property="offerCover" destination="hwZ-7l-QW6" id="DoA-bB-CI1"/>
                         <segue destination="vWL-yO-FjH" kind="show" identifier="UploadPhotoSegue" id="Xxh-nD-ZEV"/>
+                        <segue destination="Dwl-px-2ER" kind="show" identifier="createPhoto" id="pgo-Z4-Oe6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6h-jY-IH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5241" y="-435"/>
+        </scene>
+        <!--create photo-->
+        <scene sceneID="qWO-hS-zqQ">
+            <objects>
+                <viewController id="Dwl-px-2ER" customClass="photoCreator" customModule="Lilaky" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gwv-Jd-e0R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gQJ-qS-zlh"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="47w-l6-NoF"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="create photo" id="A6h-zD-yPg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="ggM-wC-lGc">
+                            <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="Dwl-px-2ER" id="84Z-hj-UTi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Fhd-a3-wnV">
+                            <color key="tintColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="Save:" destination="Dwl-px-2ER" id="EU7-SD-wVS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABJ-qP-OHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6125" y="-457"/>
         </scene>
         <!--Upload PhotoVC-->
         <scene sceneID="8Wt-rT-j5r">
@@ -667,7 +700,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEq-Hm-MDz">
-                                <rect key="frame" x="0.0" y="661" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="617" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="JXe-S2-ysX"/>
                                 </constraints>
@@ -675,15 +708,15 @@
                                     <barButtonItem systemItem="action" id="YEt-pj-NEu">
                                         <inset key="imageInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="100" maxX="0.0" maxY="100"/>
-                                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="UploadPhotoes:" destination="vWL-yO-FjH" id="eYm-oQ-he4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PTr-KX-pVW"/>
-                                    <barButtonItem systemItem="camera" id="kyU-Kp-7wg">
+                                    <barButtonItem style="plain" systemItem="camera" id="kyU-Kp-7wg">
                                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
-                                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="SelectPhotoes:" destination="vWL-yO-FjH" id="XB8-63-tyT"/>
                                         </connections>
@@ -691,7 +724,7 @@
                                 </items>
                             </toolbar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-Nf-wJl">
-                                <rect key="frame" x="10" y="0.0" width="394" height="661"/>
+                                <rect key="frame" x="10" y="0.0" width="394" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2F7-kS-NUN">
                                     <size key="itemSize" width="170" height="145"/>
@@ -720,7 +753,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odk-nh-OaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6730" y="-435"/>
+            <point key="canvasLocation" x="6981" y="-399"/>
         </scene>
         <!--Nave Menu-->
         <scene sceneID="sFj-V5-ocD">
@@ -1427,7 +1460,7 @@
         <image name="username" width="83" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ydz-Wj-n92"/>
+        <segue reference="vtD-Zo-gLo"/>
         <segue reference="jeP-0k-dea"/>
     </inferredMetricsTieBreakers>
 </document>

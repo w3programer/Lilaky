@@ -1,9 +1,7 @@
 
 import UIKit
 import SlideMenuControllerSwift
-
 class HomeVc: SlideMenuController {
-
     var action = false
     @IBAction func NaveButton(_ sender: UIButton) {
         if !action {

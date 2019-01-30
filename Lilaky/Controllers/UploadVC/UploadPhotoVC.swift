@@ -16,10 +16,6 @@ class UploadPhotoVC: UIViewController {
         PhotoArray.reserveCapacity(imagecount)
         navigationController?.title = NSLocalizedString("select albums photoes", comment: "select photoes")
         view.backgroundColor = .white
-        
-        
-        
-        
         UploadcolectionView.backgroundColor = .clear
         UploadcolectionView.alwaysBounceVertical = true
       

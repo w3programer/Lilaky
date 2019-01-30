@@ -7,8 +7,7 @@ class LogInVc: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         if Helper.getUserData() == true {
-            self.performSegue(withIdentifier: "HomeSegue", sender: self)
-            
+            self.performSegue(withIdentifier: "HomeSegue", sender: self)   
         }
     }
  
