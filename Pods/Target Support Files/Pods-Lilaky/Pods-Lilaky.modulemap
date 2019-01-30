@@ -1,0 +1,6 @@
+framework module Pods_Lilaky {
+  umbrella header "Pods-Lilaky-umbrella.h"
+
+  export *
+  module * { export * }
+}
